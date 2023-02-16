@@ -4,6 +4,7 @@ export default function Root() {
     return (
       <>
       <Header/>
+      <Header/>
         <div id="sidebar">
           <h1>Login</h1>
           <div>
