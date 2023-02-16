@@ -6,6 +6,7 @@ export default function Wall() {
     return (
       <div id="wall">
         <Header/>
+        
         <button className="buttonclose">Cerrar sesion</button>
         <div className="divWall">
           <textarea className="textarea" rows="10" ></textarea>

@@ -18,6 +18,7 @@ const router = createBrowserRouter([
   {
     path:'wall/:wallId',
     element: <Wall/>
+    
   }
 ]);
 
