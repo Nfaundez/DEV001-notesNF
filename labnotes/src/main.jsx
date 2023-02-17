@@ -9,6 +9,7 @@ import './index.css'
 import ErrorPage from "./error-page";
 import Wall from "./Vistas/wall"
 
+
 const router = createBrowserRouter([
   {
     path: "/",
