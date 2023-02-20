@@ -27,6 +27,7 @@ if (user !== null) {
 }
   return googlePopUp();
 };
+
   // Initialize Firebase
   
  // signOut(auth).then(() => { esto es para signOut (colocar en el import de auth)
@@ -38,3 +39,5 @@ if (user !== null) {
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// Initialize Firebase
+  
