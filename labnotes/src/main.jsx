@@ -5,7 +5,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import './index.css'
+import './main.css'
 import ErrorPage from "./error-page";
 import Wall from "./Vistas/wall"
 

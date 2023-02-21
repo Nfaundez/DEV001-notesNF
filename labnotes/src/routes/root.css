@@ -1,7 +1,46 @@
+html{
+  background: url(./imagenes/fondo-pantalla.jpg);
+}
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px red solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  div, p {
+    text-shadow: 1px 1px 1px ;
+   
+  }
+
+ form {
+  padding: 16px;
+  width: 16px*20;
+  margin: 0 auto;
+  font-size: 30px;
+  color: #000000;
+  }
+
+ .segment{
+  padding: 16px*2 0;
+  text-align: center;
+ } 
+
+ button, input {
+  font-size: 16px;
+  padding: 16px;
+  text-shadow: 1px 1px 0;
+  border-color: #000000;
+}
+label {
+  text-align: center;
+  display: block;
+  margin-bottom: 16px*1.5;
+  width: 100%;
+  margin: 0;
+    flex: 1;
+}
+  button{
+  
+  font-weight: 600;
+  background-color: #F27171 ;
   }

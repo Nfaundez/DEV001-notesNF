@@ -1,4 +1,6 @@
 import Header from "../components/header";
+import Buttonclose from "../components/buttonclose";
+import "./wall.css"
 export default function Wall() {
     const wall = {
     };
@@ -9,16 +11,18 @@ export default function Wall() {
       <div id="wall">
         <Header/>
         
-        <button className="buttonclose">Cerrar sesion</button>
+
+        
         <div className="divWall">
           <input class="title"></input>
           <textarea className="textarea" rows="10" ></textarea>
           <button className="buttonPost">Guardar</button>
-          </div>
-          <div className="notessaved">
+        </div>
+          {/* <div className="notessaved">
           <button className="buttonDelete">Eliminar</button>
           <button className="buttonEdit">Editar</button>
-          </div>
-        </div>
+          </div> */}
+          <Buttonclose/>
+      </div>
     )
   }
