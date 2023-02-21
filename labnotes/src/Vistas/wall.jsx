@@ -27,7 +27,7 @@ export default function Wall() {
           <div className="notessaved">
           <button className="buttonDelete">Eliminar</button>
           <button className="buttonEdit">Editar</button>
-          </div> */}
+          </div>
           <Buttonclose/>
       </div>
     )
