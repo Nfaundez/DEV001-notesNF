@@ -32,7 +32,7 @@ if (user !== null) {
   return googlePopUp();
 };
 
- const db = getFirestore(app);
+export const db = getFirestore(app);
  // datos strings
 // se envia la funcion de guardar tarea
 // el metodo adddoc() agrega un identificador,
