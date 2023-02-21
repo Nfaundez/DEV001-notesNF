@@ -1,16 +1,29 @@
 import Header from "../components/header";
+import Wallform from "./wallForm";
+import { db } from "../firebase/firebaseConfig";
+import { addDoc, collection } from "firebase/firestore";
+
 export default function Wall() {
-    const wall = {
+
+  //guarda la imformacion ingresada al input
+  
+  const saveNote = (title, description) => {
+    addDoc(collection(db, 'notes'), title, description);
+    console.log("guardado");
+  }
+
+  const wall = {
+
     };
+
+    
 
     return (
       <div id="wall">
         <Header/>
-        
         <button className="buttonclose">Cerrar sesion</button>
-        <div className="divWall">
-          <textarea className="textarea" rows="10" ></textarea>
-          <button className="buttonPost">Guardar</button>
+        <Wallform saveNote={saveNote}/>
+          <div  className="divWall" id="divWall">      
           </div>
           <div className="notessaved">
           <button className="buttonDelete">Eliminar</button>
