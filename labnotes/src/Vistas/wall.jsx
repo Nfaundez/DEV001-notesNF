@@ -1,4 +1,10 @@
 import Header from "../components/header";
+import Buttonclose from "../components/buttonclose";
+import Wallform from "./wallForm";
+import './wall.css';
+import { db } from "../firebase/firebaseConfig";
+import { addDoc, collection } from "firebase/firestore";
+
 export default function Wall() {
 
   //guarda la imformacion ingresada al input
@@ -17,18 +23,14 @@ export default function Wall() {
     return (
       <div id="wall">
         <Header/>
-        
-        <button className="buttonclose">Cerrar sesion</button>
-        <div className="divWall">
-          <input class="title"></input>
-          <textarea className="textarea" rows="10" ></textarea>
-          <button className="buttonPost">Guardar</button>
+        <Buttonclose/>
+        <Wallform saveNote={saveNote}/>
+          <div  className="divWall" id="divWall">      
           </div>
-          <div className="notessaved">
+          {/* <div className="notessaved">
           <button className="buttonDelete">Eliminar</button>
           <button className="buttonEdit">Editar</button>
-          </div>
-          <Buttonclose/>
+          </div> */}
       </div>
     )
   }
