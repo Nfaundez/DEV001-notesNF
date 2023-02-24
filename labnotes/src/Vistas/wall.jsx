@@ -31,7 +31,6 @@ export default function Wall() {
   //useEffectse ejecuta en cada render.
   useEffect(() => {
     getNotes().then(result => { return setArrayNotes(result) });
-    return
   }, []);
 
   /* if (!setArrayNotes()) {
@@ -47,13 +46,6 @@ export default function Wall() {
   const seeNote = setArrayNotes().map((number) =>
     <li>{number}</li>
   );*/
-
-
-  const wall = {
-
-  };
-
-
 
   return (
     <div id="wall">
