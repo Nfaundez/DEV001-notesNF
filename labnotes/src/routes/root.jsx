@@ -23,19 +23,17 @@ export default function Root() {
   return (
     <>
       <Header />
-      {/* <main>  */}
         <form> 
       <div id="sidebar">
           <div className="segment">
                </div>
-               <label>
-          <p>¡No olvides dejar tus notas!</p>
+               {/* <label> */}
+          <h2>¡No olvides dejar tus notas!</h2>
                 <h2>Ingresa con:</h2>
-              <button type="submit" onClick={(e)=>signInWithGoogle(e)}>Google</button>
-            </label>
+              <button className="google" type="submit" onClick={(e)=>signInWithGoogle(e)}>Google</button>
+            {/* </label> */}
       </div>
       </form>
-      {/* </main> */}
     </>
   );
 };

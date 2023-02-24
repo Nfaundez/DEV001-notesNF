@@ -30,8 +30,10 @@ export default function Wallform(props) {
     return (
         <>
         <form id="wallform" onSubmit={handleSubmit}>
-            <input type="text" className="noteTitle" name="title" placeholder="titulo" onChange={handleInputChange}></input>
-            <textarea className="noteDescription" name="description" rows="30" placeholder="deja tu nota" onChange={handleInputChange}></textarea>
+          <label>Titulo:</label>
+            <input type="text" className="noteTitle" name="title" placeholder="Ingresa un titulo" onChange={handleInputChange}></input>
+
+            <textarea className="noteDescription" name="description" rows="30" placeholder="Deja aqui tu nota" onChange={handleInputChange}></textarea>
             <button className="buttonSave">Guardar</button>
         </form>
         </>

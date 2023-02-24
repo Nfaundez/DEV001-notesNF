@@ -8,7 +8,6 @@
   align-items: center;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #ffffff;
   background: url(./imagenes/fondo-pantalla.jpg); 
   background-position: top;
   background-size: cover;
@@ -37,8 +36,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
+  background-color: #ffffff;
+  
   transition: border-color 0.25s;
 }
 
@@ -52,10 +51,6 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+
+ 
 }

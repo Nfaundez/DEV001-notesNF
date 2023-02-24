@@ -1,46 +1,28 @@
-html{
-  background: url(./imagenes/fondo-pantalla.jpg);
-}
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  }
-  
-  div, p {
-    text-shadow: 1px 1px 1px ;
-   
-  }
 
- form {
-  padding: 16px;
-  width: 16px*20;
-  margin: 0 auto;
+form {
   font-size: 30px;
+  width:300px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
   color: #000000;
   }
+  h2{
+    text-align: center;
+    color:white;
 
- .segment{
-  padding: 16px*2 0;
-  text-align: center;
- } 
+  }
 
- button, input {
-  font-size: 16px;
-  padding: 16px;
-  text-shadow: 1px 1px 0;
-  border-color: #000000;
-}
-label {
-  text-align: center;
-  display: block;
-  margin-bottom: 16px*1.5;
-  width: 100%;
-  margin: 0;
-    flex: 1;
-}
-  button{
+ .google{
   
-  font-weight: 600;
-  background-color: #F27171 ;
+    width:100%;
+    padding:8px 16px;
+    margin-top:32px;
+    border:1px solid ;
+    border-radius:5px;
+    display:block;
+
+    background-color: #F27171 ;
+      color:white;
+      font-weight: 30;
   }

@@ -24,13 +24,15 @@ export default function Wall() {
       <div id="wall">
         <Header/>
         <Buttonclose/>
+        <div id="wallinwall">
         <Wallform saveNote={saveNote}/>
           <div  className="divWall" id="divWall">      
-          </div>
-          {/* <div className="notessaved">
+          </div></div>
+
+          <div className="notessaved">
           <button className="buttonDelete">Eliminar</button>
           <button className="buttonEdit">Editar</button>
-          </div> */}
-      </div>
+          </div>
+      </div>  
     )
   }
