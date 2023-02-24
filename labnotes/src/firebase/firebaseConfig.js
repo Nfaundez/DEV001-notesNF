@@ -37,7 +37,10 @@ export const db = getFirestore(app);
 // se envia la funcion de guardar tarea
 // el metodo adddoc() agrega un identificador,
 // quiero guardar un objeto documento en la collecion tarea
-export const saveNote = (title, description) => addDoc(collection(db, 'notes'), { title, description });
+
+
+
+//export const saveNote = (title, description) => addDoc(collection(db, 'notes'), { title, description });
 // onsnapshot va escuchando, cuando ocurra un cambio como traerlo
 export const onGetNote = (callback) => onSnapshot(collection(db, 'notes'), callback);
 // el metodo deletedoc elimina el documento
