@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
+import './wall.css';
 export default function Wallform(props) {
 
   const initialNote = {
@@ -30,6 +31,7 @@ export default function Wallform(props) {
   return (
     <>
       <form id="wallform" onSubmit={handleSubmit}>
+      <label>Titulo:</label>
         <input type="text" className="noteTitle" name="title" placeholder="titulo" onChange={handleInputChange} value={values.title}></input>
         <textarea className="noteDescription" name="description" rows="10" placeholder="deja tu nota" onChange={handleInputChange} value={values.description}></textarea>
         <button className="buttonSave">Guardar</button>

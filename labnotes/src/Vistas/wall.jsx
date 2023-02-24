@@ -1,5 +1,7 @@
 import Header from "../components/header";
+import Buttonclose from "../components/buttonclose";
 import Wallform from "./wallForm";
+import './wall.css';
 import { db } from "../firebase/firebaseConfig";
 import { addDoc, collection, getDocs, onSnapshot, query } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
@@ -35,25 +37,17 @@ export default function Wall() {
 
   /* if (!setArrayNotes()) {
     return null
-  }
-
-  return (
-        setArrayNotes.map((number) =>
-      <li>{number}</li>
-      )
-  );
-
-  const seeNote = setArrayNotes().map((number) =>
-    <li>{number}</li>
-  );*/
+  } */
 
   return (
     <div id="wall">
       <Header />
-      <button className="buttonclose">Cerrar sesion</button>
-      <Wallform saveNote={saveNote} />
-      <div className="divWall" id="divWall">
-      </div>
+      <Buttonclose />
+      <div id="wallinwall">
+        <Wallform saveNote={saveNote} />
+        <div className="divWall" id="divWall">
+        </div></div>
+
       <div className="notessaved">
         <button className="buttonDelete">Eliminar</button>
         <button className="buttonEdit">Editar</button>
