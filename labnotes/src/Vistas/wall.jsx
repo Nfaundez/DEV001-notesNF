@@ -31,6 +31,7 @@ export default function Wall() {
   //useEffectse ejecuta en cada render.
   useEffect(() => {
     getNotes().then(result => { return setArrayNotes(result) });
+    return
   }, []);
 
   /* if (!setArrayNotes()) {
