@@ -66,14 +66,18 @@
 
 /* inicia contenido de nota */
 
-  .notessaved{
-    height:200px;
+  /* .notessaved{
+    
+        background-color: #C4FF78;
+          } */
+   .notita{
+            height:200px;
     width:280px;
     padding:0px;
     border-radius:10px;
     margin:auto;
-        background-color: #C4FF78;
-          }
+    background-color: #C4FF78;
+                  }
 
   .buttonDelete{
     position: relative; 
