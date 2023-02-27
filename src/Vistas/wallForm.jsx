@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './wall.css';
 export default function Wallform(props) {
 
@@ -6,8 +6,10 @@ export default function Wallform(props) {
     title: '',
     description: ''
   }
-
+// variables de estado
   const [values, setValues] = useState(initialNote)
+ 
+
 
   //actualiza el form
   const handleSubmit = e => {
@@ -15,7 +17,7 @@ export default function Wallform(props) {
     props.saveNote(values);
     setValues({ ...initialNote })
   }
-
+  
   //recoge los datos de los imputs
   const handleInputChange = e => {
     e.preventDefault();
@@ -23,6 +25,7 @@ export default function Wallform(props) {
     //copia los valores ingresados, reconoce el name y coloca el valor
     setValues({ ...values, [name]: value });
   }
+
 
   const Wallform = {
 
