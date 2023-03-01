@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1677515636958" clover="3.2.0">
-  <project timestamp="1677515636959" name="All files">
-    <metrics statements="68" coveredstatements="16" conditionals="4" coveredconditionals="0" methods="22" coveredmethods="2" elements="94" coveredelements="18" complexity="0" loc="68" ncloc="68" packages="5" files="8" classes="8"/>
+<coverage generated="1677680941255" clover="3.2.0">
+  <project timestamp="1677680941256" name="All files">
+    <metrics statements="69" coveredstatements="16" conditionals="4" coveredconditionals="0" methods="22" coveredmethods="2" elements="95" coveredelements="18" complexity="0" loc="69" ncloc="69" packages="5" files="8" classes="8"/>
     <package name="src">
       <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="error-page.jsx" path="C:\Lab Notes\DEV001-notesNF\src\error-page.jsx">
+      <file name="error-page.jsx" path="C:\Users\56961\Desktop\laboratoria\DEV001-notesNF\src\error-page.jsx">
         <metrics statements="3" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
       </file>
-      <file name="main.jsx" path="C:\Lab Notes\DEV001-notesNF\src\main.jsx">
+      <file name="main.jsx" path="C:\Users\56961\Desktop\laboratoria\DEV001-notesNF\src\main.jsx">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="13" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.Vistas">
-      <metrics statements="28" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
-      <file name="wall.jsx" path="C:\Lab Notes\DEV001-notesNF\src\Vistas\wall.jsx">
-        <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <metrics statements="29" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
+      <file name="wall.jsx" path="C:\Users\56961\Desktop\laboratoria\DEV001-notesNF\src\Vistas\wall.jsx">
+        <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="16" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
       </file>
-      <file name="wallForm.jsx" path="C:\Lab Notes\DEV001-notesNF\src\Vistas\wallForm.jsx">
+      <file name="wallForm.jsx" path="C:\Users\56961\Desktop\laboratoria\DEV001-notesNF\src\Vistas\wallForm.jsx">
         <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="5" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
@@ -55,12 +56,12 @@
     </package>
     <package name="src.components">
       <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <file name="buttonclose.jsx" path="C:\Lab Notes\DEV001-notesNF\src\components\buttonclose.jsx">
+      <file name="buttonclose.jsx" path="C:\Users\56961\Desktop\laboratoria\DEV001-notesNF\src\components\buttonclose.jsx">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
       </file>
-      <file name="header.jsx" path="C:\Lab Notes\DEV001-notesNF\src\components\header.jsx">
+      <file name="header.jsx" path="C:\Users\56961\Desktop\laboratoria\DEV001-notesNF\src\components\header.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
@@ -68,14 +69,14 @@
     </package>
     <package name="src.firebase">
       <metrics statements="20" coveredstatements="11" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="0"/>
-      <file name="firebaseConfig.js" path="C:\Lab Notes\DEV001-notesNF\src\firebase\firebaseConfig.js">
+      <file name="firebaseConfig.js" path="C:\Users\56961\Desktop\laboratoria\DEV001-notesNF\src\firebase\firebaseConfig.js">
         <metrics statements="20" coveredstatements="11" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="0"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -85,16 +86,16 @@
         <line num="29" count="0" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
-        <line num="35" count="2" type="stmt"/>
-        <line num="45" count="2" type="stmt"/>
-        <line num="48" count="2" type="stmt"/>
-        <line num="49" count="2" type="stmt"/>
-        <line num="52" count="2" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.routes">
       <metrics statements="11" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
-      <file name="root.jsx" path="C:\Lab Notes\DEV001-notesNF\src\routes\root.jsx">
+      <file name="root.jsx" path="C:\Users\56961\Desktop\laboratoria\DEV001-notesNF\src\routes\root.jsx">
         <metrics statements="11" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
         <line num="7" count="2" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
