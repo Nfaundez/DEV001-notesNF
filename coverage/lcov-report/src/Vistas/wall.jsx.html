@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>0/17</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>0/17</span>
             </div>
         
             
@@ -137,8 +137,7 @@
 <a name='L72'></a><a href='#L72'>72</a>
 <a name='L73'></a><a href='#L73'>73</a>
 <a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -178,7 +177,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -218,7 +217,7 @@ import Buttonclose from "../components/buttonclose";
 import Wallform from "./wallForm";
 import './wall.css';
 import { db } from "../firebase/firebaseConfig";
-import { addDoc, collection, getDocs, onSnapshot, query } from "firebase/firestore";
+import { addDoc, collection, getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 &nbsp;
 &nbsp;
@@ -237,25 +236,25 @@ export default function <span class="fstat-no" title="function not covered" >Wal
 &nbsp;
   const [listNote, setListNote] = <span class="cstat-no" title="statement not covered" >useState([])</span>
 &nbsp;
-  const getList = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {</span>
+  const getList = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync() =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    try {</span>
       const querySnapshot = <span class="cstat-no" title="statement not covered" >await getDocs(collection(db, 'notes'))</span>
       const docs = <span class="cstat-no" title="statement not covered" >[];</span>
-<span class="cstat-no" title="statement not covered" >      querySnapshot.forEach(<span class="fstat-no" title="function not covered" >(d</span>oc) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        docs.push({ ...doc.data(), id: doc.id })</span>
+<span class="cstat-no" title="statement not covered" >      querySnapshot.forEach(<span class="fstat-no" title="function not covered" >(d</span>oc)=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        docs.push({...doc.data(), id:doc.id})</span>
       })
 <span class="cstat-no" title="statement not covered" >      setListNote(docs)</span>
-    } catch (error) {
+    }catch (error){
 <span class="cstat-no" title="statement not covered" >      console.log(error)</span>
     }
-  }
+   };
 &nbsp;
-  // funcion renderizar contenido de nota y titulo
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    getList(listNote)</span>
-  }, [])
-&nbsp;
-&nbsp;
+// funcion renderizar contenido de nota y titulo
+<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span>=&gt;{</span>
+<span class="cstat-no" title="statement not covered" >    getList()</span>
+<span class="cstat-no" title="statement not covered" >    console.log('veamos')</span>
+  },[]);
+    
 <span class="cstat-no" title="statement not covered" >  return (</span>
     &lt;div id="wall"&gt;
       &lt;Header /&gt;
@@ -267,15 +266,13 @@ export default function <span class="fstat-no" title="function not covered" >Wal
 &nbsp;
       &lt;div className="notessaved"&gt;
         &lt;div className="note-body"&gt;
-          {
-            listNote.map(<span class="fstat-no" title="function not covered" >li</span>st =&gt; (
-<span class="cstat-no" title="statement not covered" >              &lt;div className="notita"</span>
-                key={`div${list.id}`}&gt;
-                &lt;h2 className="title"&gt;{list.title}&lt;/h2&gt;
-                &lt;p className="description"&gt;{list.description}&lt;/p&gt;
-                &lt;button className="buttonDelete"&gt;Eliminar&lt;/button&gt;
-          &lt;button className="buttonEdit"&gt;Editar&lt;/button&gt; 
-                {/* &lt;div className="buttons"&gt;
+        {
+          listNote.map(<span class="fstat-no" title="function not covered" >li</span>st =&gt; (
+<span class="cstat-no" title="statement not covered" >          &lt;div className="notita" </span>
+          key= {`div${list.id}`}&gt;
+          &lt;h2 className="title"&gt;{list.title}&lt;/h2&gt;
+          &lt;p className="description"&gt;{list.description}&lt;/p&gt;
+          {/* &lt;div className="buttons"&gt;
            &lt;button className="buttonDelete"&gt;Eliminar&lt;/button&gt;
           &lt;button className="buttonEdit"&gt;Editar&lt;/button&gt; 
           &lt;/div&gt; */}
@@ -287,7 +284,7 @@ export default function <span class="fstat-no" title="function not covered" >Wal
       &lt;/div&gt;
     &lt;/div&gt;
   )
-}
+};
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -295,7 +292,7 @@ export default function <span class="fstat-no" title="function not covered" >Wal
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-03-01T16:17:04.906Z
+                at 2023-03-01T14:29:00.148Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
