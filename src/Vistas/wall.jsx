@@ -15,6 +15,7 @@ export default function Wall() {
   const [listNote, setListNote] = useState([])
   const [subId, setSubId] = useState('')
 
+  
   const getList = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, 'notes'))
@@ -27,6 +28,11 @@ export default function Wall() {
       console.log(error)
     }
   };
+
+  // funcion renderizar contenido de nota y titulo
+  useEffect(() => {
+    getList()
+  }, []);
 
   const getOneNote = async (id) => {
     try {
@@ -45,26 +51,17 @@ export default function Wall() {
     console.log(getNoteEdit)
   }, [subId])
 
-  // funcion renderizar contenido de nota y titulo
-  useEffect(() => {
-    getList()
-  }, []);
-
-
-
-
   // funcion para eliminar notas
   const deleteNote = async (id) => {
     await deleteDoc(doc(db, 'notes', id))
   }
-
 
   return (
     <div id="wall">
       <Header />
       <Buttonclose />
       <div id="wallinwall">
-         <Wallform  /> 
+        <Wallform getNoteEdit={getNoteEdit} />
         <div className="divWall" id="divWall">
         </div>
       </div>
