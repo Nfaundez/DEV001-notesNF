@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { loginWithGoogle } from "../firebase/firebaseConfig";
-import Header from "../components/header";
+import Header from "../components/Header";
 import "./root.css"
 
 export default function Root() {
@@ -15,7 +15,7 @@ export default function Root() {
           //actualiza un valor si la clave ya existe
           localStorage.setItem("name", displayNameUser);
           localStorage.setItem("email", emailUser);
-          navigate("/wall/:wallId");
+          navigate("/wall");
         })
         .catch( console.error ) 
   };
