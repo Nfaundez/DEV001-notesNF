@@ -1,9 +1,9 @@
-import Header from "../components/header";
-import Buttonclose from "../components/buttonclose";
-import Wallform from "./wallForm";
+import Header from "../components/Header";
+import Buttonclose from "../components/Buttonclose";
+import Wallform from "./WallForm";
 import './wall.css';
 import { db } from "../firebase/firebaseConfig";
-import { collection, deleteDoc, getDocs, doc, getDoc } from "firebase/firestore";
+import { collection, deleteDoc, getDocs, doc, getDoc} from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 
 
@@ -38,7 +38,9 @@ export default function Wall() {
     try {
       const docRef = doc(db, 'notes', id)
       const docSnap = await getDoc(docRef)
+      // console.log(subId)
       setgetNoteEdit(docSnap.data())
+
     } catch (error) {
       console.log(error)
     }
@@ -48,7 +50,6 @@ export default function Wall() {
     if (subId !== '') {
       getOneNote(subId)
     }
-    console.log(getNoteEdit)
   }, [subId])
 
   // funcion para eliminar notas
@@ -61,7 +62,7 @@ export default function Wall() {
       <Header />
       <Buttonclose />
       <div id="wallinwall">
-        < Wallform getNoteEdit={getNoteEdit} />
+        < Wallform getNoteEdit={getNoteEdit} subId={subId} />
         <div className="divWall" id="divWall">
         </div>
       </div>

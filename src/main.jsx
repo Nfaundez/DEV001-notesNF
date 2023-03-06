@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path:'wall/:wallId',
+    path:'/wall',
     element: <Wall/>
     
   }
