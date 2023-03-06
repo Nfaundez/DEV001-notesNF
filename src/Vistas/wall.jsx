@@ -61,7 +61,7 @@ export default function Wall() {
       <Header />
       <Buttonclose />
       <div id="wallinwall">
-        <Wallform getNoteEdit={getNoteEdit} />
+        < Wallform getNoteEdit={getNoteEdit} />
         <div className="divWall" id="divWall">
         </div>
       </div>

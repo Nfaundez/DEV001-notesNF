@@ -1,33 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './wall.css';
 import { db } from "../firebase/firebaseConfig";
 import { addDoc, collection } from "firebase/firestore"
 
-export default function Wallform(props) {
-
-  console.log(props.getNoteEdit)
-
-  const editNote = {
-  title: props.getNoteEdit.title,
-  description: props.getNoteEdit.description
-   } 
-   console.log(editNote)
-
-  const initialNote = {
-    title: '',
-    description: ''
-  }
+export default function Wallform({getNoteEdit}) {
 
   // variables de estado
-  const [values, setValues] = useState(initialNote)
-  //console.log(props.values)
-  if (props.getNoteEdit !== '') {
-    // console.log(editNote)
-    // console.log(useState(editNote))
-    setValues(editNote)
-  } else {
-    // console.log(useState(initialNote))
-    setvalues(initialNote)
+  const [values, setValues] = useState({
+    title:'',
+    description:''
+  })
+
+  // cada vez que cambia el getnoteedit el setvalues se reemplaza
+  useEffect(() => {
+ 
+      setValues({
+        title: getNoteEdit.title,
+        description: getNoteEdit.description
+      })
+   
+  }, [getNoteEdit])
+
+  const initialNote = {
+    title:'',
+    description:''
   }
 
   //actualiza el form
@@ -35,7 +31,7 @@ export default function Wallform(props) {
     e.preventDefault();
     saveNote(values);
     //restablece los valores iniciales 
-    setValues({ ...initialNote })
+    setValues(... initialNote)
   }
 
   // guarda los datos recogidos del formulario a firestore
