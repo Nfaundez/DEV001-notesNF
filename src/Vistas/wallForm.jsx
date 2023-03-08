@@ -3,7 +3,7 @@ import './wall.css';
 import { db } from "../firebase/firebaseConfig";
 import { addDoc, collection, setDoc, doc } from "firebase/firestore"
 
-export default function Wallform({ getNoteEdit, subId }) {
+export default function Wallform({ getNoteEdit, subId, setSubId, getList }) {
 
   // variables de estado
   const [values, setValues] = useState({
@@ -15,8 +15,8 @@ export default function Wallform({ getNoteEdit, subId }) {
   useEffect(() => {
 
     setValues({
-      title: getNoteEdit.title,
-      description: getNoteEdit.description
+      title: getNoteEdit.title || "",
+      description: getNoteEdit.description || ""
     })
 
   }, [getNoteEdit])
@@ -32,6 +32,8 @@ export default function Wallform({ getNoteEdit, subId }) {
     saveNote(values);
     //restablece los valores iniciales 
     setValues({ ...initialNote })
+    setSubId('')
+    getList();
   }
 
   // guarda los datos recogidos del formulario a firestore
@@ -51,12 +53,12 @@ export default function Wallform({ getNoteEdit, subId }) {
         await setDoc(doc(db, 'notes', subId), {
           ...values
         })
-
+        setSubId('')
       } catch (error) {
         console.log(error)
       }
     }
-    // setSubId('')
+    
   }
 
   //recoge los datos de los imputs
