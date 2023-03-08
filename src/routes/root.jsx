@@ -2,16 +2,18 @@ import { useNavigate } from "react-router-dom";
 import { loginWithGoogle } from "../firebase/firebaseConfig";
 import Header from "../components/Header";
 import "./root.css"
-
+// expresion siempre te devuelve un valor 
+// objeto : llave valor.// css module.
 export default function Root() {
   const navigate = useNavigate();
-
+  
   const signInWithGoogle = (e) => {
-  e.preventDefault ()
+
+  e.preventDefault () // cancela el evento
       loginWithGoogle().then((res) => { 
+        const displayNameUser = res.user.displayName;
+        const emailUser = res.user.email;
       
-          const displayNameUser = res.user.displayName;
-          const emailUser = res.user.email;
           //actualiza un valor si la clave ya existe
           localStorage.setItem("name", displayNameUser);
           localStorage.setItem("email", emailUser);
