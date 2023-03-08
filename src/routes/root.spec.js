@@ -15,7 +15,7 @@ import {
 
   // TEST DE LA VISTA ROOT
   describe('test de funcion Root',()=>{
-    // primer it sobre renderizacion
+    // primer it sobre renderizacionde root
     it ('se renderiza el texto de root', ()=>{
       const router = createBrowserRouter([ // traje el router de main,jsx ya que el error lo pedia
       {
