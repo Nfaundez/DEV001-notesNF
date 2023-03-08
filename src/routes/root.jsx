@@ -14,8 +14,6 @@ export default function Root() {
         const displayNameUser = res.user.displayName;
         const emailUser = res.user.email;
       
-          const displayNameUser = res.user.displayName;
-          const emailUser = res.user.email;
           //actualiza un valor si la clave ya existe
           localStorage.setItem("name", displayNameUser);
           localStorage.setItem("email", emailUser);
