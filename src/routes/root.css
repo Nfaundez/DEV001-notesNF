@@ -1,28 +1,32 @@
-
 form {
   font-size: 30px;
-  width:300px;
-	padding:16px;
-	border-radius:10px;
-	margin:auto;
+  width: 300px;
+  padding: 16px;
+  border-radius: 10px;
+  margin: auto;
   color: #000000;
-  }
-  h2{
-    text-align: center;
-    color:white;
+}
 
-  }
+.img {
+  background-image: none;
+}
 
- .google{
-  
-    width:100%;
-    padding:8px 16px;
-    margin-top:32px;
-    border:1px solid ;
-    border-radius:5px;
-    display:block;
+h2 {
+  text-align: center;
+  color: white;
 
-    background-color: #F27171 ;
-      color:white;
-      font-weight: 30;
-  }
+}
+
+.google {
+
+  width: 100%;
+  padding: 8px 16px;
+  margin-top: 32px;
+  border: 1px solid;
+  border-radius: 5px;
+  display: block;
+
+  background-color: #F27171;
+  color: white;
+  font-weight: 30;
+}

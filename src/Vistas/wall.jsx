@@ -3,7 +3,7 @@ import Buttonclose from "../components/Buttonclose";
 import Wallform from "./WallForm";
 import './wall.css';
 import { db } from "../firebase/firebaseConfig";
-import { collection, deleteDoc, getDocs, doc, getDoc} from "firebase/firestore";
+import { collection, deleteDoc, getDocs, doc, getDoc } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 
 
@@ -11,11 +11,11 @@ export default function Wall() {
 
   // useState es un Hook que te permite añadir el estado de React a un componente de función.
 
-  const [getNoteEdit, setgetNoteEdit] = useState([])
+  const [getNoteEdit, setgetNoteEdit] = useState({})
   const [listNote, setListNote] = useState([])
   const [subId, setSubId] = useState('')
 
-  
+  //actualiza los datos
   const getList = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, 'notes'))
@@ -62,7 +62,7 @@ export default function Wall() {
       <Header />
       <Buttonclose />
       <div id="wallinwall">
-        < Wallform getNoteEdit={getNoteEdit} subId={subId} />
+        < Wallform getNoteEdit={getNoteEdit} subId={subId} setSubId={setSubId} getList={getList} />
         <div className="divWall" id="divWall">
         </div>
       </div>
@@ -74,12 +74,17 @@ export default function Wall() {
               <div className="notita"
                 key={`div${list.id}`}>
                 <h2 className="title">{list.title}</h2>
+                <hr width="100%"></hr>
                 <p className="description">{list.description}</p>
                 <div className="buttons">
-                  <button className="buttonDelete" onClick={() => deleteNote(list.id)}>
-                    Eliminar
-                  </button>
-                  <button className="buttonEdit" onClick={() => setSubId(list.id)}>Editar</button>
+                  <button className="buttonDelete" onClick={() => {
+                    deleteNote(list.id)
+                    getList()
+                  }}>Eliminar</button>
+                  <button className="buttonEdit" onClick={() => {
+                    setSubId(list.id)
+                    getList()
+                  }}>Editar</button>
                 </div>
               </div>
 

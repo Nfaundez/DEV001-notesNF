@@ -1,9 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import {
-  getFirestore, collection, addDoc,
-  onSnapshot, deleteDoc, doc, getDoc, updateDoc,
+  getFirestore
 } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -21,6 +20,12 @@ const firebaseConfig = {
   export const loginWithGoogle = () => {
     return signInWithPopup(auth, provider);
   };
+
+  export function salirDeCuenta() {
+    return signOut(auth);
+  }
+
+
     
     
 
