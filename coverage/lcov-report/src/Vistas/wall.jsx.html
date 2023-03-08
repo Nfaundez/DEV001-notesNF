@@ -200,6 +200,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -227,6 +228,11 @@ import React, { useEffect, useState } from "react";
 &nbsp;
 &nbsp;
 export default function <span class="fstat-no" title="function not covered" >Wall(</span>) {
+&nbsp;
+  // useState es un Hook que te permite añadir el estado de React a un componente de función.
+  
+&nbsp;
+&nbsp;
   const saveNote = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync (title, description) =&gt; {</span>
     //el metodo adddoc() agrega un identificador, quiero guardar un objeto documento en la collecion
 <span class="cstat-no" title="statement not covered" >    await addDoc(collection(db, 'notes'), title, description);</span>
@@ -276,16 +282,16 @@ export default function <span class="fstat-no" title="function not covered" >Wal
           key= {`div${list.id}`}&gt; 
           &lt;h2 className="title"&gt;{list.title}&lt;/h2&gt;
           &lt;p className="description"&gt;{list.description}&lt;/p&gt;
-          &lt;div className="buttons"&gt;
-           &lt;button className="buttonDelete" onClick={<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >deleteNote(list.id)}</span>&gt;
-            Eliminar
-            &lt;/button&gt;
-           &lt;button className="buttonEdit"&gt;Editar&lt;/button&gt; 
-           &lt;/div&gt;
-          &lt;/div&gt; 
-          ))
+          {/* &lt;div className="buttons"&gt;
+           &lt;button className="buttonDelete"&gt;Eliminar&lt;/button&gt;
+          &lt;button className="buttonEdit"&gt;Editar&lt;/button&gt; 
+          &lt;/div&gt; */}
+          
+          &lt;/div&gt;
+))
         }
         &lt;/div&gt;
+        
       &lt;/div&gt;
     &lt;/div&gt;
            )
