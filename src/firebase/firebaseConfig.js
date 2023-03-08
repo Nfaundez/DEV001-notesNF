@@ -17,20 +17,12 @@ const firebaseConfig = {
   export const app = initializeApp(firebaseConfig);
   export const auth = getAuth (app); 
   export const provider = new GoogleAuthProvider();
-  export const googlePopUp = () => signInWithPopup(auth, provider);
+  //export const googlePopUp = () => signInWithPopup(auth, provider);
   export const loginWithGoogle = () => {
-  
-  const auth = getAuth();
-  const user = auth.currentUser;
-if (user !== null) {
-  const displayNameUser = user.displayName;
-  const emailUser = user.email;
-  const uid = user.uid;
-  console.log("usuario ingresado: ", emailUser)
-  console.log("usuario display: ", displayNameUser)
-}
-  return googlePopUp();
-};
+    return signInWithPopup(auth, provider);
+  };
+    
+    
 
 export const db = getFirestore(app);
  // datos strings

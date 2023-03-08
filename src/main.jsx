@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path:'wall/:wallId',
+    path:'wall/:wallId', // hay que corregir ese wallid de la ruta 
     element: <Wall/>
     
   }

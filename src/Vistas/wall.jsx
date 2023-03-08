@@ -8,20 +8,12 @@ import React, { useEffect, useState } from "react";
 
 
 export default function Wall() {
-
-  // useState es un Hook que te permite añadir el estado de React a un componente de función.
-  
-
-
   const saveNote = async (title, description) => {
     //el metodo adddoc() agrega un identificador, quiero guardar un objeto documento en la collecion
     await addDoc(collection(db, 'notes'), title, description);
     console.log("guardado");
   }
-
-
-  const [listNote, setListNote] = useState([])
-
+  const [listNote, setListNote] = useState([]) // añadir el estado de react a un componente de funcion.
   const getList = async() => {
     try {
       const querySnapshot = await getDocs(collection(db, 'notes'))
@@ -36,7 +28,7 @@ export default function Wall() {
    };
 
 // funcion renderizar contenido de nota y titulo
-  useEffect(()=>{
+  useEffect(()=>{ // el componente tiene que hacer algo luego de renderizarse
     getList()
   
   },[]);
@@ -47,7 +39,7 @@ export default function Wall() {
   await deleteDoc (doc(db, 'notes', id))
 }
 
-
+// key se utiliza para evitar problemas de renderizacion.
   return (
     <div id="wall">
       <Header />
@@ -62,7 +54,7 @@ export default function Wall() {
         {
           listNote.map(list => (
           <div className="notita" 
-          key= {`div${list.id}`}>
+          key= {`div${list.id}`}> 
           <h2 className="title">{list.title}</h2>
           <p className="description">{list.description}</p>
           <div className="buttons">
@@ -72,14 +64,14 @@ export default function Wall() {
            <button className="buttonEdit">Editar</button> 
            </div>
           </div> 
+          ))
+        }
+        </div>
+      </div>
+    </div>
+           )
+          };
            
           
         
-))
-        }
-        </div>
         
-      </div>
-    </div>
-  )
-};

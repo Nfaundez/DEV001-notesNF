@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/17</span>
+                <span class='fraction'>0/19</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>0/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/17</span>
+                <span class='fraction'>0/19</span>
             </div>
         
             
@@ -137,12 +137,10 @@
 <a name='L72'></a><a href='#L72'>72</a>
 <a name='L73'></a><a href='#L73'>73</a>
 <a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,10 +155,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -177,24 +172,35 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -216,25 +222,17 @@ import Buttonclose from "../components/buttonclose";
 import Wallform from "./wallForm";
 import './wall.css';
 import { db } from "../firebase/firebaseConfig";
-import { addDoc, collection, getDocs } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, getDocs, doc } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 &nbsp;
 &nbsp;
 export default function <span class="fstat-no" title="function not covered" >Wall(</span>) {
-&nbsp;
-  // useState es un Hook que te permite añadir el estado de React a un componente de función.
-  
-&nbsp;
-&nbsp;
   const saveNote = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync (title, description) =&gt; {</span>
     //el metodo adddoc() agrega un identificador, quiero guardar un objeto documento en la collecion
 <span class="cstat-no" title="statement not covered" >    await addDoc(collection(db, 'notes'), title, description);</span>
 <span class="cstat-no" title="statement not covered" >    console.log("guardado");</span>
   }
-&nbsp;
-&nbsp;
-  const [listNote, setListNote] = <span class="cstat-no" title="statement not covered" >useState([])</span>
-&nbsp;
+  const [listNote, setListNote] = <span class="cstat-no" title="statement not covered" >useState([]) </span>// añadir el estado de react a un componente de funcion.
   const getList = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync() =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    try {</span>
       const querySnapshot = <span class="cstat-no" title="statement not covered" >await getDocs(collection(db, 'notes'))</span>
@@ -249,11 +247,18 @@ export default function <span class="fstat-no" title="function not covered" >Wal
    };
 &nbsp;
 // funcion renderizar contenido de nota y titulo
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span>=&gt;{</span>
+<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span>=&gt;{ // el componente tiene que hacer algo luego de renderizarse</span>
 <span class="cstat-no" title="statement not covered" >    getList()</span>
-<span class="cstat-no" title="statement not covered" >    console.log('veamos')</span>
+  
   },[]);
     
+  
+  // funcion para eliminar notas
+  const deleteNote = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync (id) =&gt;{</span>
+<span class="cstat-no" title="statement not covered" >  await deleteDoc (doc(db, 'notes', id))</span>
+}
+&nbsp;
+// key se utiliza para evitar problemas de renderizacion.
 <span class="cstat-no" title="statement not covered" >  return (</span>
     &lt;div id="wall"&gt;
       &lt;Header /&gt;
@@ -268,23 +273,27 @@ export default function <span class="fstat-no" title="function not covered" >Wal
         {
           listNote.map(<span class="fstat-no" title="function not covered" >li</span>st =&gt; (
 <span class="cstat-no" title="statement not covered" >          &lt;div className="notita" </span>
-          key= {`div${list.id}`}&gt;
+          key= {`div${list.id}`}&gt; 
           &lt;h2 className="title"&gt;{list.title}&lt;/h2&gt;
           &lt;p className="description"&gt;{list.description}&lt;/p&gt;
-          {/* &lt;div className="buttons"&gt;
-           &lt;button className="buttonDelete"&gt;Eliminar&lt;/button&gt;
-          &lt;button className="buttonEdit"&gt;Editar&lt;/button&gt; 
-          &lt;/div&gt; */}
-          
-          &lt;/div&gt;
-))
+          &lt;div className="buttons"&gt;
+           &lt;button className="buttonDelete" onClick={<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >deleteNote(list.id)}</span>&gt;
+            Eliminar
+            &lt;/button&gt;
+           &lt;button className="buttonEdit"&gt;Editar&lt;/button&gt; 
+           &lt;/div&gt;
+          &lt;/div&gt; 
+          ))
         }
         &lt;/div&gt;
-        
       &lt;/div&gt;
     &lt;/div&gt;
-  )
-};
+           )
+          };
+           
+          
+        
+        
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -292,7 +301,7 @@ export default function <span class="fstat-no" title="function not covered" >Wal
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-03-01T14:29:00.148Z
+                at 2023-03-08T15:03:01.291Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
